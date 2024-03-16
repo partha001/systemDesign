@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-03-16T11:36:14.724Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="nKVJt0c6SHE3xmwKEQFb" version="24.0.7" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2024-03-16T12:50:35.503Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="6H4ZfrxdaffZYwjyUoNE" version="24.0.7" type="github" pages="3">
   <diagram name="token-bucke" id="v6pINDUFzFCo3DSQktNw">
     <mxGraphModel dx="2874" dy="1538" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -120,10 +120,137 @@
     </mxGraphModel>
   </diagram>
   <diagram id="gcGI74t8z1b59NGciOI-" name="fixed-window-counter">
-    <mxGraphModel dx="1674" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1674" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="WW_CqvM93zO90wAZIoMS-1" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="180" y="210" width="410" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="WW_CqvM93zO90wAZIoMS-2" value="userId:1_12.10&amp;nbsp; &amp;nbsp;value:10&lt;div&gt;userId:1_12.11&amp;nbsp; &amp;nbsp;value:10&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="290" y="270" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WW_CqvM93zO90wAZIoMS-3" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;FIXED-WINDOW-COUNTER&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="140" y="20" width="490" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WW_CqvM93zO90wAZIoMS-4" value="say the rate limit is 10 request / per user/ permin" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="120" width="410" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-1" value="here we have a pre-generated set of keys for a user per min and the allowable request count&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;whenever a request comes for the user for a min we dont updat the timestamp but just reduce the count of remaining request&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="690" y="200" width="420" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-4" value="thus for user1 if a request comes within 12.11 min then we will serve that request and reduce the counter to&amp;nbsp;&lt;div&gt;userId:1_12.11&amp;nbsp; &amp;nbsp;value:9&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="650" y="520" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-5" value="if within a min the amount of servable request becomes zero . then furthur requests will be denied" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="690" y="610" width="540" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-7" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.47;entryY=-0.125;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="vwu4MT4GD_0GTJjHPJlX-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="930" y="260" as="sourcePoint" />
+            <mxPoint x="450" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-9" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;u&gt;thus this is more memory effecient&amp;nbsp; however&amp;nbsp;&lt;/u&gt;&lt;/font&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;&lt;u&gt;the drawback of this approach is that its not accurate&lt;/u&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="570" width="400" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-11" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="920" as="sourcePoint" />
+            <mxPoint x="870" y="920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-12" value="11" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="60" y="928" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-13" value="12" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="220" y="928" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-14" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=0.525;exitY=0.2;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="vwu4MT4GD_0GTJjHPJlX-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="590" y="870" as="sourcePoint" />
+            <mxPoint x="240" y="900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-15" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="940" as="sourcePoint" />
+            <mxPoint x="400" y="900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-16" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="950" as="sourcePoint" />
+            <mxPoint x="560" y="900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-17" value="13" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="380" y="938" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-18" value="14" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="540" y="948" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-19" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="80" y="1000" as="sourcePoint" />
+            <mxPoint x="240" y="1000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-20" value="10 req" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="958" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-21" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="239" y="999" as="sourcePoint" />
+            <mxPoint x="399" y="999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-22" value="10 req" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="290" y="968" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-23" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="850" as="sourcePoint" />
+            <mxPoint x="120" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-24" value="1 req comes here" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="30" y="818" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-25" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="800" as="sourcePoint" />
+            <mxPoint x="220" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-26" value="another 8 req&lt;div&gt;&amp;nbsp;comes here at&lt;/div&gt;&lt;div&gt;56th second&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="140" y="743" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-27" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="760" as="sourcePoint" />
+            <mxPoint x="260" y="920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-28" value="10 req comes at&lt;div&gt;12.12.02sec&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="225" y="703" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-29" value="here in this case though by min wise we have maintaned 10 request" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="1060" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-30" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="910" as="sourcePoint" />
+            <mxPoint x="270" y="920" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="80" y="680" />
+              <mxPoint x="410" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vwu4MT4GD_0GTJjHPJlX-31" value="total 18 requets are actually served within a span of 6 seconds which&amp;nbsp;&lt;div&gt;actaully violates the condition of 10 req per min&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="55" y="643" width="390" height="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
