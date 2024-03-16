@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-03-16T12:57:33.501Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="sSaXu-QLXy9raZ5orshW" version="24.0.7" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-03-16T13:52:11.327Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="bU74jBYn6RFiAdmnNDw2" version="24.0.7" type="github" pages="4">
   <diagram name="token-bucket" id="v6pINDUFzFCo3DSQktNw">
     <mxGraphModel dx="2874" dy="1538" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -259,6 +259,36 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="G__wuWgDHgD2qmnZGgjI-1" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;&lt;u&gt;Sliding Window logs&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="330" y="23" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="G__wuWgDHgD2qmnZGgjI-2" value="here in redis cache/db we keep a a track of all request for a user like shown below&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="210" y="100" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="G__wuWgDHgD2qmnZGgjI-5" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="60" y="160" width="510" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="G__wuWgDHgD2qmnZGgjI-4" value="[&amp;nbsp; req1 , req2, req3, req4, req5 , req6 , req7 ]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="280" y="240" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="G__wuWgDHgD2qmnZGgjI-3" value="key: user1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="185" y="240" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="G__wuWgDHgD2qmnZGgjI-6" value="[&amp;nbsp; req1 , req2, req3, req4, req5 , req6 , req7 ]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="279" y="276" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="G__wuWgDHgD2qmnZGgjI-7" value="key: user2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="184" y="276" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="G__wuWgDHgD2qmnZGgjI-8" value="here each req contains the timstamp of the request" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="640" y="190" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="G__wuWgDHgD2qmnZGgjI-9" value="whenever a new request comes for a user we see that&amp;nbsp; how&amp;nbsp;&lt;div&gt;many request are there for that user within the last windows. for example&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;say for user1 we get a request at 10.12.15 . now we query the database get item count&lt;/div&gt;&lt;div&gt;for user1 where req.timestamp&amp;gt;= 10.11.15&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;if the count &amp;lt;10 then we serve the request and make an entry for the new request in the value&lt;/div&gt;&lt;div&gt;list of user1&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;additionally we can also make an asynchronous call to remove those&amp;nbsp;&lt;/div&gt;&lt;div&gt;entries for user1 hwere req.timestamp&amp;gt; 10.11.15&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="575" y="165" width="520" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="G__wuWgDHgD2qmnZGgjI-10" value="sliding window of request limit of 10 request in 1 min per user" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="280" y="63" width="350" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
