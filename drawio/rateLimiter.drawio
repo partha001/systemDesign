@@ -1,11 +1,62 @@
-<mxfile host="app.diagrams.net" modified="2024-03-16T10:40:16.805Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="scsS_lsakYp7XD8ha22t" version="24.0.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-16T11:04:52.963Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="JYUljdVh76dfeZdfWLfG" version="24.0.5" type="github">
   <diagram name="Page-1" id="v6pINDUFzFCo3DSQktNw">
-    <mxGraphModel dx="2074" dy="1588" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2874" dy="1938" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="sgVZMrZOMx6er7qCFTv7-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-358" y="-597" width="120" height="60" as="geometry" />
+        <mxCell id="TpiBtcLV2gjJ7eYalAtP-1" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="-632" y="-590" width="563" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="TpiBtcLV2gjJ7eYalAtP-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TpiBtcLV2gjJ7eYalAtP-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-917.5" y="-588" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TpiBtcLV2gjJ7eYalAtP-2" value="token bucket algorithm" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-987" y="-680" width="139" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TpiBtcLV2gjJ7eYalAtP-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.464;entryY=-0.122;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="TpiBtcLV2gjJ7eYalAtP-4" target="TpiBtcLV2gjJ7eYalAtP-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TpiBtcLV2gjJ7eYalAtP-4" value="user makes a request" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-987" y="-583" width="133" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TpiBtcLV2gjJ7eYalAtP-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.498;entryY=-0.129;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="TpiBtcLV2gjJ7eYalAtP-5" target="TpiBtcLV2gjJ7eYalAtP-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-894" y="-392" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TpiBtcLV2gjJ7eYalAtP-5" value="no entry present in cache/database. hence make an entry in to data&lt;div&gt;and then serve the request&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-1083" y="-516" width="377" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="TpiBtcLV2gjJ7eYalAtP-7" value="Key: userId11" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-523" y="-523" width="91" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TpiBtcLV2gjJ7eYalAtP-8" value="value: 10.12.18.001 ---4" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-343" y="-523" width="145" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TpiBtcLV2gjJ7eYalAtP-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TpiBtcLV2gjJ7eYalAtP-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-905" y="-231" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TpiBtcLV2gjJ7eYalAtP-11" value="now if another request comes from the same user. we check if an entry is available in db or not&lt;div&gt;1. if an entry is availabe&lt;/div&gt;&lt;div&gt;we will check if the request is within same min of or not&amp;nbsp;&lt;/div&gt;&lt;div&gt;a.if within same min then reduce the count of available requests left&amp;nbsp; and update the time stamp&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-1167" y="-406" width="524" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TpiBtcLV2gjJ7eYalAtP-12" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="-628" y="-427" width="563" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="TpiBtcLV2gjJ7eYalAtP-13" value="Key: userId11" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-523" y="-374" width="91" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TpiBtcLV2gjJ7eYalAtP-14" value="value: 10.12.18.010 ---3" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-343" y="-374" width="145" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TpiBtcLV2gjJ7eYalAtP-16" value="similarly if the user keeps making more request within the same min&amp;nbsp;&lt;div&gt;and the servable request count has become zero then we will reject the request&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-1132" y="-227" width="440" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="TpiBtcLV2gjJ7eYalAtP-17" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;token bucket algorith&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-678" y="-824" width="184" height="34" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
