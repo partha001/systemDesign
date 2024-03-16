@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-03-16T11:15:05.582Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="msQQ3glIAyg0v0CJJXSG" version="24.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-16T11:29:17.620Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="fnX-Q2USikXirsEiRiRo" version="24.0.7" type="github" pages="2">
   <diagram name="token-bucke" id="v6pINDUFzFCo3DSQktNw">
-    <mxGraphModel dx="2874" dy="1588" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2874" dy="1538" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -58,8 +58,63 @@
         <mxCell id="TpiBtcLV2gjJ7eYalAtP-17" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;token bucket algorithm&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-778" y="-764" width="199" height="34" as="geometry" />
         </mxCell>
-        <mxCell id="BA6rLaDJZo4gBLlH0paF-2" value="additionally since&amp;nbsp; to keep the cache search space small&lt;div&gt;while creating records we can provide it a ttl of 2mins so that&amp;nbsp;&lt;/div&gt;&lt;div&gt;cleanup of old records keep happening automatically&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="BA6rLaDJZo4gBLlH0paF-2" value="additionally since&amp;nbsp; to keep the cache search space small&lt;div&gt;while creating records we can provide it a ttl of 2mins so that&amp;nbsp;&lt;/div&gt;&lt;div&gt;cleanup of old records keep happening automatically&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="-571.5" y="-263" width="450" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="m2F0o57sVTtjkA1WLSd2" name="leaky-bucket-alogorithm">
+    <mxGraphModel dx="1674" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9l1T_0m_hgeEZGjoY-rE-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9l1T_0m_hgeEZGjoY-rE-2" target="9l1T_0m_hgeEZGjoY-rE-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9l1T_0m_hgeEZGjoY-rE-2" value="request queue with a constant holding capacity&amp;nbsp;&lt;div&gt;say 5 request&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="130" width="160" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="9l1T_0m_hgeEZGjoY-rE-3" value="process running which reads a&amp;nbsp;&lt;div&gt;request from the queue and starts&lt;/div&gt;&lt;div&gt;processing it.&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="490" width="220" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="9l1T_0m_hgeEZGjoY-rE-4" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="10" as="sourcePoint" />
+            <mxPoint x="330" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9l1T_0m_hgeEZGjoY-rE-5" value="incoming requests" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="360" y="50" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9l1T_0m_hgeEZGjoY-rE-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9l1T_0m_hgeEZGjoY-rE-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="670" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9l1T_0m_hgeEZGjoY-rE-7" value="say the first request comes and is picked up&amp;nbsp;&lt;div&gt;by the processor . while the first request is being processed&lt;/div&gt;&lt;div&gt;5 more request come which gets queued up&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="500" y="38" width="340" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="9l1T_0m_hgeEZGjoY-rE-8" value="Processor" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="130" y="595" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9l1T_0m_hgeEZGjoY-rE-10" value="so processor is catering to request1. while 5 more&amp;nbsp;&lt;div&gt;requests are in the queue. at this point 6th and 7th request comes.&lt;/div&gt;&lt;div&gt;so since the queue is full the 6th and 7th request will get&amp;nbsp;&lt;/div&gt;&lt;div&gt;rejected .&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="455" y="238" width="380" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="9l1T_0m_hgeEZGjoY-rE-11" value="now say the 1st request is complete and prcessor picks up the&amp;nbsp;&lt;div&gt;second request from the queue.&lt;span style=&quot;background-color: initial;&quot;&gt;so a space is emptied in the queue and now&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;when the 8th request comes&amp;nbsp; then it again gets queued up.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="450" y="370" width="430" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9l1T_0m_hgeEZGjoY-rE-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.458;entryY=-0.117;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="9l1T_0m_hgeEZGjoY-rE-10" target="9l1T_0m_hgeEZGjoY-rE-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9l1T_0m_hgeEZGjoY-rE-13" value="and the process continues this way." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="560" y="488" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9l1T_0m_hgeEZGjoY-rE-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.462;entryY=0.033;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="9l1T_0m_hgeEZGjoY-rE-11" target="9l1T_0m_hgeEZGjoY-rE-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9l1T_0m_hgeEZGjoY-rE-15" value="this kind of design is helpful in smoothening out sudden burst of traffic" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="480" y="625" width="390" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
