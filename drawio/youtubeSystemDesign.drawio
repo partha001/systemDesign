@@ -1,9 +1,142 @@
-<mxfile host="app.diagrams.net" modified="2024-03-17T18:15:45.613Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="Cs2wg-oE2uLF4V1pnaYs" version="24.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-17T18:49:58.288Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="MLbpCZehwgHXkndBPzZu" version="24.0.7" type="github">
   <diagram name="Page-1" id="iaRSk2_xgpkPCr4ylLeU">
-    <mxGraphModel dx="1674" dy="858" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="1674" dy="1708" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-1" value="client system&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-2" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="1030" as="sourcePoint" />
+            <mxPoint x="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-3" value="upload_Service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.067;exitY=0.367;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sV2Sxrgt5Zt75V8i2qBT-1" target="sV2Sxrgt5Zt75V8i2qBT-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="330" as="sourcePoint" />
+            <mxPoint x="570" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-5" value="1. video upload" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-30;" vertex="1" parent="1">
+          <mxGeometry x="220" y="188" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-6" value="aws-S3" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="50" width="140" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="sV2Sxrgt5Zt75V8i2qBT-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="330" as="sourcePoint" />
+            <mxPoint x="1240" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-8" value="2. puts the videos in s3" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="725" y="68" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sV2Sxrgt5Zt75V8i2qBT-9" target="sV2Sxrgt5Zt75V8i2qBT-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-9" value="Queue" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.queue;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="425" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-10" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="sV2Sxrgt5Zt75V8i2qBT-3" target="sV2Sxrgt5Zt75V8i2qBT-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="330" as="sourcePoint" />
+            <mxPoint x="570" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-11" value="4. makes an entry in the queue for with uploaded video details" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=35;" vertex="1" parent="1">
+          <mxGeometry x="700" y="280" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-12" value="mongo/cassandra" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="310" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-13" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.033;entryY=0.2;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="sV2Sxrgt5Zt75V8i2qBT-3" target="sV2Sxrgt5Zt75V8i2qBT-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="330" as="sourcePoint" />
+            <mxPoint x="630" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-14" value="3.makes an entry into the databaase for uploaded video" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=20;" vertex="1" parent="1">
+          <mxGeometry x="800" y="188" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.014;entryY=0.563;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="sV2Sxrgt5Zt75V8i2qBT-15" target="sV2Sxrgt5Zt75V8i2qBT-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1570" y="140" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="530" y="610" />
+              <mxPoint x="531" y="610" />
+              <mxPoint x="531" y="680" />
+              <mxPoint x="1570" y="680" />
+              <mxPoint x="1570" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-15" value="video-encoding-service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="425" width="140" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-17" value="encoding service reads from the queu" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="660" y="420" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-19" value="stores encoded video back to s3" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="720" y="648" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-20" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.233;entryY=1.047;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="sV2Sxrgt5Zt75V8i2qBT-15" target="sV2Sxrgt5Zt75V8i2qBT-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="830" y="420" as="sourcePoint" />
+            <mxPoint x="1330" y="550" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="610" y="550" />
+              <mxPoint x="1300" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-21" value="makes entry for encoded video into necessary table for data analysis / machine learning/ recommendation engine" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="sV2Sxrgt5Zt75V8i2qBT-20">
+          <mxGeometry x="-0.1332" y="-10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-22" value="another client" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="790" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-23" value="notification service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="810" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-24" value="Queue" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.queue;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="790" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-25" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.271;exitY=1.123;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="sV2Sxrgt5Zt75V8i2qBT-15" target="sV2Sxrgt5Zt75V8i2qBT-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="830" y="720" as="sourcePoint" />
+            <mxPoint x="1070" y="700" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="510" y="700" />
+              <mxPoint x="1050" y="700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-26" value="put a messge in the notification queue for the subscribers of this channel" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="855" y="728" width="410" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.058;entryY=0.167;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="sV2Sxrgt5Zt75V8i2qBT-24" target="sV2Sxrgt5Zt75V8i2qBT-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-28" value="notification service reads this message" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="665" y="788" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-29" value="one more client system" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1000" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.067;entryY=0.817;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="sV2Sxrgt5Zt75V8i2qBT-23" target="sV2Sxrgt5Zt75V8i2qBT-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sV2Sxrgt5Zt75V8i2qBT-31" value="sends notification of the uploaded video&lt;div&gt;to the subscriber of the channel&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="210" y="850" width="230" height="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
